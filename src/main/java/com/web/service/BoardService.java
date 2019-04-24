@@ -7,9 +7,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-/**
- * Created by KimYJ on 2017-07-13.
- */
+
 @Service
 public class BoardService {
 
@@ -25,10 +23,6 @@ public class BoardService {
     }
 
     public Board findBoardByIdx(Long idx) {
-        return boardRepository.getOne(idx);
-    }
-
-    public Board saveAndUpdateBoard(Board board) {
-        return boardRepository.save(board);
+        return boardRepository.findById(idx).orElse(new Board());
     }
 }

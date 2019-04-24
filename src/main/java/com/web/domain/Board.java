@@ -20,9 +20,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-/**
- * Created by KimYJ on 2017-07-12.
- */
 @Getter
 @NoArgsConstructor
 @Entity
